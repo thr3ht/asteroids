@@ -1,0 +1,17 @@
+{
+  "asteroidHealth": 1,
+  "asteroidSpeed": 30.0,
+  "asteroidRotationSpeed": 20.0,
+  "asteroidSpawnInterval": 3.0,
+  "asteroidInitialCount": 3,
+  "asteroidMaxCount": 3,
+  "asteroidFragmentSpeed": 45.0,
+  "asteroidScore": 1,
+
+  "shipHealth": 3,
+  "shipSpeed": 20.0,
+  "shipRotationSpeed": 360.0,
+  "shipSpawnInterval": 10.0,
+  "shipMaxCount": 1,
+  "shipScore": 3
+}

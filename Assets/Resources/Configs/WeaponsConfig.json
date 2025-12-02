@@ -1,0 +1,14 @@
+{
+  "bulletDamage": 1,
+  "bulletSpeed": 60.0,
+  "bulletMaxLifeTime": 6.0,
+  "bulletCooldown": 0.3,
+
+  "laserDamage": 10,
+  "laserMaxLifeTime": 0.3,
+  "laserWidth": 0.3,
+  "laserLight": 130.0,
+  "laserMaxCharge": 3,
+  "laserCooldown" : 0.3,
+  "laserReloadTime": 13.0
+}

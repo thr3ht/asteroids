@@ -1,0 +1,7 @@
+{
+  "health": 3,
+  "maxSpeed": 60.0,
+  "acceleration": 30.0,
+  "rotationSpeed": 180.0,
+  "shieldDuration": 3
+}
