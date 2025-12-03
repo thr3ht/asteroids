@@ -5,7 +5,7 @@ using Zenject;
 
 namespace _Project.Scripts.External.AdMob
 {
-    public class AdManager : MonoBehaviour
+    public class AdManager
     {
         private readonly string _rewardedUnitId = "ca-app-pub-3940256099942544/5224354917";
 
@@ -14,12 +14,14 @@ namespace _Project.Scripts.External.AdMob
         private bool _isRewardGranted;
 
         [Inject]
-        public void Construct(SignalBus signalBus)
+        public AdManager(SignalBus signalBus)
         {
             _signalBus = signalBus;
+            
+            Initialize();
         }
 
-        private void Start()
+        private void Initialize()
         {
             MobileAds.Initialize(initStatus =>
             {

@@ -2,14 +2,20 @@ using Firebase;
 using Firebase.Analytics;
 using Firebase.Extensions;
 using UnityEngine;
+using Zenject;
 
 namespace _Project.Scripts.External.Firebase
 {
-    public class FirebaseManager : MonoBehaviour
+    public class FirebaseManager
     {
         private bool _isInitialized = false;
+        
+        public FirebaseManager()
+        {
+            Initialize();
+        }
 
-        private void Start()
+        private void Initialize()
         {
             FirebaseApp.CheckAndFixDependenciesAsync()
                 .ContinueWithOnMainThread(result =>

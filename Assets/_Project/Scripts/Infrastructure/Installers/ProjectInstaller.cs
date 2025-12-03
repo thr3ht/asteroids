@@ -9,8 +9,10 @@ namespace _Project.Scripts.Infrastructure.Installers
 {
     public class ProjectInstaller : MonoInstaller
     {
-        [SerializeField] private AdManager _adManagerPrefab;
-        [SerializeField] private FirebaseManager _firebaseManagerPrefab;
+        private const string PLAYER_CONFIG_PATH = "Configs/PlayerConfig";
+        private const string ENEMY_CONFIG_PATH = "Configs/EnemyConfig";
+        private const string WEAPONS_CONFIG_PATH = "Configs/WeaponsConfig";
+        
         [SerializeField] private bool _showAds = false;
     
         public override void InstallBindings()
@@ -36,7 +38,6 @@ namespace _Project.Scripts.Infrastructure.Installers
         
             Container
                 .Bind<AdManager>()
-                .FromComponentInNewPrefab(_adManagerPrefab)
                 .AsSingle()
                 .NonLazy();
 
@@ -47,28 +48,27 @@ namespace _Project.Scripts.Infrastructure.Installers
         
             Container
                 .Bind<FirebaseManager>()
-                .FromComponentInNewPrefab(_firebaseManagerPrefab)
                 .AsSingle()
                 .NonLazy();
         }
     
         private PlayerConfig LoadPlayerConfig()
         {
-            TextAsset configFile = Resources.Load<TextAsset>("Configs/PlayerConfig");
+            TextAsset configFile = Resources.Load<TextAsset>(PLAYER_CONFIG_PATH);
 
             return JsonConvert.DeserializeObject<PlayerConfig>(configFile.text);
         }
     
         private EnemyConfig LoadEnemyConfig()
         {
-            TextAsset configFile = Resources.Load<TextAsset>("Configs/EnemyConfig");
+            TextAsset configFile = Resources.Load<TextAsset>(ENEMY_CONFIG_PATH);
 
             return JsonConvert.DeserializeObject<EnemyConfig>(configFile.text);
         }
     
         private WeaponsConfig LoadWeaponsConfig()
         {
-            TextAsset configFile = Resources.Load<TextAsset>("Configs/WeaponsConfig");
+            TextAsset configFile = Resources.Load<TextAsset>(WEAPONS_CONFIG_PATH);
 
             return JsonConvert.DeserializeObject<WeaponsConfig>(configFile.text);
         }

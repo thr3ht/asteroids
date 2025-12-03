@@ -76,8 +76,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3529717529be4fa58b229cfd2c808789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _adManagerPrefab: {fileID: 1247248142688682679, guid: 4037747be1917442291b24a947201448, type: 3}
-  _firebaseManagerPrefab: {fileID: 3248660734413178944, guid: 2e6c1005c1ca74acd962f211f1b7fda6, type: 3}
   _showAds: 0
 --- !u!114 &8925601767277103692
 MonoBehaviour:
